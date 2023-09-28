@@ -4,15 +4,18 @@ from models import Pizza, Restaurant
 # Function to create pizzas and restaurants
 def create_seed_data():
     # Create pizzas
-    margarita = Pizza(name="Margarita", ingredients="Dough, Tomato Sauce, Cheese")
-    pepperoni = Pizza(name="Pepperoni", ingredients="Dough, Tomato Sauce, Cheese, Pepperoni")
+   
+    periperi= Pizza(name="periperi", ingredients="Dough, Cheese, chicken Bacon")
+    hawaaian=Pizza(name="Hawaaian", ingredients="Dough, cheese, bacon, pineapples")
+   
 
     # Create restaurants
     pizza_palace = Restaurant(name="Pizza Palace", address="123 Main St")
-    dominion_pizza = Restaurant(name="Dominion Pizza", address="456 Elm St")
+    
+    pizza_inn = Restaurant(name="Pizza inn", address="Moi ave")
 
     # Add pizzas and restaurants to the session
-    db.session.add_all([margarita, pepperoni, pizza_palace, dominion_pizza])
+    db.session.add_all([ periperi, hawaaian, pizza_palace, pizza_inn])
 
     # Commit the changes to the database
     db.session.commit()

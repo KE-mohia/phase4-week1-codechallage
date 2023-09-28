@@ -35,4 +35,4 @@ restaurant_pizza = db.Table(
     db.Column('restaurant_id', db.Integer, db.ForeignKey('restaurant.id'), primary_key=True),
     db.Column('pizza_id', db.Integer, db.ForeignKey('pizza.id'), primary_key=True),
     extend_existing=True  # Place this argument before the column definitions
-)
+)  
